@@ -2,6 +2,7 @@
 ##  Database_R5_class: a R5 class to interface with RMySQL package                ##
 ##  Author: Dario Righelli                                                        ##
 ##  Author e.mail: dario.righelli@gmail.com                                       ##
+##  project site: https://github.com/inzirio/R5MySQL.git                          ##
 ##  version: 0.01v                                                                ##
 ##                                                                                ##
 ##  note: the author reserves the rights to change this class in any moment,      ##
