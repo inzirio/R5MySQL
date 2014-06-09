@@ -1,13 +1,27 @@
 ####################################################################################
+## Copyryght (C) 2014 Dario Righelli                                              ##
+##                                                                                ##
+## R5MySQL is free software: you can redistribute it and/or modify                ##
+## it under the terms of the GNU General Public License as published by           ##
+## the Free Software Foundation, either version 3 of the License, or              ##
+## (at your option) any later version.                                            ##
+##                                                                                ##
+## This program is distributed in the hope that it will be useful,                ##
+## but WITHOUT ANY WARRANTY; without even the implied warranty of                 ##
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                  ##
+## GNU General Public License for more details.                                   ##
+##                                                                                ##
+## You should have received a copy of the GNU General Public License              ##
+## along with this program.  If not, see <http://www.gnu.org/licenses/>.          ##
+####################################################################################
 ##  Database_R5_class: a R5 class to interface with RMySQL package                ##
-##  Author: Dario Righelli                                                        ##
 ##  Author e.mail: dario.righelli@gmail.com                                       ##
 ##  project site: https://github.com/inzirio/R5MySQL.git                          ##
-##  version: 0.01v                                                                ##
+##  actual version: 0.01v                                                         ##
 ##                                                                                ##
 ##  note: the author reserves the rights to change this class in any moment,      ##
-##        Feel free to edit and improve this class, but please send any           ##
-##        improvements to the author.                                             ##
+##        Feel free to edit and improve this class, but please, to better         ##
+##        coordinate, send your improvements or ideas to the author.              ##
 ##                                                                                ##
 ####################################################################################
 
@@ -54,7 +68,7 @@ Database <- setRefClass( "Database_R5",
     },
     GetQueryResults = function(interrogation.query) {
       a <- dbSendQuery(my.self, interrogation.query)
-      out <- fetch(a, n=100000000)#-1
+      out <- fetch(a, n=100000000)#-1)
       dbClearResult(a)
       return(out)
     },
