@@ -40,7 +40,7 @@ Database <- setRefClass( "Database_R5",
   
   methods = list (
     CreateDatabase = function() {
-      my.self <<- dbConnect(MySQL(), user=my.credentials$user, password=my.credentials$password, 
+      my.self <<- dbConnect(MySQL() , user=my.credentials$user, password=my.credentials$password, 
                             port=my.credentials$port, host=my.credentials$host)
       a <- dbSendQuery(my.self, paste0('CREATE DATABASE IF NOT EXISTS', my.name,'CHARACTER SET=utf8;'))
       Disconnect()
